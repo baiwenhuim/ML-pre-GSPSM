@@ -17,7 +17,7 @@ def space_aa_seq(df, col_name):
 
 
 def get_cita():
-    cita_file_path = r'/home/baiwenhui/auto-ML-SM/Citation_training_data.csv'
+    cita_file_path = r'../data/Citation_training_data.csv'
     cita = pd.read_csv(cita_file_path, usecols=['Gene_Name'])
     return cita
 
