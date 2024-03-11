@@ -47,6 +47,10 @@ pandas
 
 The directory including in model script is changed into:  
 `cd /ML-pre-GSPSM/model`
+And you can also download the pre-trained model in three species (Arabidopsis thaliana, maize, and tomato) from [Zenodo](https://zenodo.org/doi/10.5281/zenodo.10803091).
+
+Then you can use the script predict_unknown_gene.py to predict enzyme genes which you want to predict.
+`python predict_unknown_gene.py data.csv`
 
 Model script is run for prediction of CYP76AD sequences with a simplified data set, by the following command:  
 python run_ml.py 
