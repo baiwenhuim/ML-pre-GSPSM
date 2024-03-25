@@ -50,7 +50,7 @@ The directory including in model script is changed into:
 
 `cd /ML-pre-GSPSM/model`
 
-And you can also download the pre-trained model in three species (Arabidopsis thaliana, maize, and tomato) from [Zenodo](https://doi.org/10.5281/zenodo.10803092).
+And you can also download the pre-trained model in three species (Arabidopsis thaliana, maize, and tomato) from [Zenodo](https://zenodo.org/doi/10.5281/zenodo.10803091).
 
 Once downloaded, you can unzip it:
 
