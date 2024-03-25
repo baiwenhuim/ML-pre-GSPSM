@@ -1,6 +1,6 @@
 # ML-pre-GSPSM
 
-Utilize machine learning to predict gene synthesis plant specialized metabolites
+Utilize automated machine learning to predict gene synthesis plant specialized metabolites
 
 1. System requirements
 2. Installation guide
@@ -23,6 +23,7 @@ pandas
 # 2.  Installation guide
 
 **Install miniconda:**
+
 `wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && bash Miniconda3-latest-Linux-x86_64.sh`
 
 **Create a new conda environment and update**
@@ -46,28 +47,26 @@ pandas
 # 3.  Demo
 
 The directory including in model script is changed into:  
+
 `cd /ML-pre-GSPSM/model`
-And you can also download the pre-trained model in three species (Arabidopsis thaliana, maize, and tomato) from [Zenodo](https://zenodo.org/doi/10.5281/zenodo.10803091).
 
-Then you can use the script predict_unknown_gene.py to predict enzyme genes which you want to predict.
-`python predict_unknown_gene.py data.csv`
+And you can also download the pre-trained model in three species (Arabidopsis thaliana, maize, and tomato) from [Zenodo](https://doi.org/10.5281/zenodo.10803092).
 
-Model script is run for prediction of CYP76AD sequences with a simplified data set, by the following command:  
-python run_ml.py 
+Once downloaded, you can unzip it:
 
-The following results are output into"/Downloaded_directory_path/SVM_E-model/result/":  
-●    More accurate five models  
-●    Cross validation results in the five models  
-●    Test results in the most accurate model  
+`unzip azs.zip`
 
-The demo run time is several minutes.
+Then, you can use the script predict_unknown_gene.py to predict enzyme genes which you want to predict:
 
-# 4.  Instructions for use
+`python predict_unknown_gene.py --path /prefix/model_path/azs --input /prefix/input_file.csv --output output.csv`
 
-Enzyme family classification (binary classification) models are enabled to build using your data. Enzyme sequences for training and test data should first be converted into vectors, all using the same feature extractions. Positive and negative datasets should be named "sample_positive.vec" and "sample_negative.vec", respectively. Both files should be found in "/Downloaded_directory_path/SVM_E-model/train/". The test dataset file should be  named "sample_test.vec", and found in "/Downloaded_directory_path/SVM_E-model/test/".
+The following results are output into"/Downloaded_directory_path/output.csv":  
 
-Run time depends on the dataset size and the number of vector dimensions.
+●    Cross validation results in the basic models and AutoGluon-Tabular  
+●    Test results in the AutoGluon-Tabular mode.
 
-# 5.  License
+Run time depends on the dataset size.
+
+# 4.  License
 
 This software is released under the MIT License, according to LICENSE.
